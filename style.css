@@ -1,0 +1,560 @@
+/* =====================================================
+   TUỆ NAM - VOVINAM | style.css
+   Mục lục:
+   1. Reset & biến màu       7. Vovinam (khối giới thiệu lớp)
+   2. Header & menu          8. Bảng lịch học
+   3. Nút bấm                9. Biểu diễn sân khấu
+   4. Hero (đầu trang)      10. Bản đồ, footer, nút nổi
+   5. Section & thẻ chung   11. Lightbox & popup
+   6. Gallery ảnh           12. Responsive (điện thoại)
+   ===================================================== */
+
+/* ===== 1. RESET & BIẾN MÀU =====
+   Muốn đổi màu thương hiệu: sửa các biến trong :root */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+:root {
+  --green: #22c400;
+  --red: #e60000;
+  --dark: #0f0f14;
+  --gold: #ffc107;
+  --blue: #0033a0;
+}
+body {
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+}
+
+/* ===== 2. HEADER (cố định trên cùng) & MENU ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 5%;
+}
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-wrap img {
+  height: 52px;
+  width: auto;
+}
+.logo-wrap b {
+  font-size: 17px;
+  line-height: 1.1;
+}
+.logo-wrap small {
+  font-size: 11px;
+  color: #666;
+}
+nav a {
+  color: #111;
+  margin: 0 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ===== 3. NÚT BẤM: .btn (xanh lá), .btn-red (đỏ), .btn-blue (xanh dương) ===== */
+.btn {
+  background: var(--green);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  display: inline-block;
+  border: 0;
+  cursor: pointer;
+}
+.btn-red {
+  background: var(--red);
+}
+.btn-blue {
+  background: var(--blue);
+}
+
+/* Nút ☰ (chỉ hiện trên điện thoại) và menu thả xuống */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  z-index: 98;
+  padding: 16px 5%;
+}
+.mobile-nav a {
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 700;
+  color: #111;
+}
+.mobile-nav.show {
+  display: block;
+} /* JS thêm class .show để mở menu */
+
+/* ===== 4. HERO: tiêu đề + ảnh bên trái, form đăng ký bên phải ===== */
+.hero {
+  margin-top: 68px;
+  background: linear-gradient(135deg, #0033a0, #0f0f14 45%, #c8102e);
+  color: #fff;
+  padding: 40px 5%;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.hero-text {
+  flex: 1.2;
+  min-width: 300px;
+}
+.hero-text h1 {
+  font-size: 40px;
+  line-height: 1.1;
+}
+.hero-text h1 span {
+  color: var(--gold);
+}
+.hero-img {
+  flex: 1;
+  min-width: 300px;
+}
+.hero-img img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+  height: 300px;
+}
+.hero-card {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  color: #111;
+  border-radius: 24px;
+  padding: 22px;
+}
+.hero-card input,
+.hero-card select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.hero-card button {
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  background: var(--red);
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* ===== 5. SECTION & THẺ DÙNG CHUNG ===== */
+.section {
+  padding: 55px 5%;
+}
+.section h2 {
+  font-size: 32px;
+  text-align: center;
+}
+.section h2 span {
+  color: var(--red);
+}
+.sub {
+  text-align: center;
+  opacity: 0.7;
+  margin: 10px 0 28px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #fff8e7;
+  border: 1px solid #ffe9a8;
+  border-radius: 20px;
+  padding: 20px;
+}
+.card h3 {
+  margin: 8px 0;
+}
+.card p {
+  font-size: 14px;
+}
+.dark {
+  background: var(--dark);
+  color: #fff;
+}
+.dark .card {
+  background: #1e1e28;
+  color: #fff;
+  border-color: #333;
+}
+
+/* ===== 6. GALLERY ẢNH (3 cột, chú thích nằm đè phía dưới ảnh) ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.gallery img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.gallery figure {
+  position: relative;
+}
+.gallery figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: #fff;
+  padding: 24px 12px 10px;
+  border-radius: 0 0 16px 16px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ===== 7. VOVINAM: khung giới thiệu (trái) + danh sách lớp (phải) ===== */
+.vovinam {
+  background: #fff3e0;
+  border: 2px solid var(--blue);
+  border-radius: 24px;
+  padding: 28px;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.vovinam-left {
+  flex: 1;
+  min-width: 280px;
+}
+.vovinam-right {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  color: #111;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== 8. BẢNG LỊCH HỌC ===== */
+.schedule {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 14px;
+}
+.schedule th {
+  background: var(--blue);
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+}
+.schedule td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* ===== 9. BIỂU DIỄN SÂN KHẤU (nền tối): thẻ dịch vụ, gallery, 3 bước đặt show ===== */
+.show-section {
+  background: linear-gradient(135deg, #0f0f14, #4a0000 50%, #0033a0);
+  padding: 60px 5%;
+}
+.show-section h2 {
+  color: #fff;
+}
+.show-section h2 span {
+  color: #ffc107;
+}
+.show-sub {
+  text-align: center;
+  color: #ddd;
+  margin: 10px 0 28px;
+}
+.show-card {
+  background: #fff;
+  color: #111;
+  border: 2px solid #ffc107;
+  border-radius: 20px;
+  padding: 22px;
+}
+.show-card .icon {
+  font-size: 36px;
+}
+.show-card h3 {
+  margin: 8px 0;
+}
+.show-card ul {
+  margin: 10px 0 10px 18px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.show-gallery {
+  max-width: 1000px;
+  margin: 30px auto 0;
+}
+.show-gallery h3 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.show-gallery .gallery {
+  grid-template-columns: repeat(4, 1fr);
+}
+.show-steps {
+  max-width: 900px;
+  margin: 30px auto 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 22px;
+  text-align: center;
+}
+.show-steps h3 {
+  color: #ffc107;
+}
+.show-steps p {
+  color: #fff;
+  margin-top: 10px;
+  line-height: 2;
+}
+.show-steps .note {
+  color: #ddd;
+  font-size: 13px;
+  margin-top: 12px;
+}
+.btn-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+/* ===== 10. BẢN ĐỒ, FOOTER, NÚT ZALO NỔI, NÚT ADMIN ===== */
+.map {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+footer {
+  background: #0f0f14;
+  color: #fff;
+  padding: 35px 5% 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+footer a {
+  color: var(--gold);
+}
+.float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0068ff;
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  z-index: 99;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.admin-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #111;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  z-index: 99;
+  font-weight: 700;
+}
+
+/* ===== 11. LIGHTBOX (phóng to ảnh) & POPUP (form đặt show, đăng nhập) =====
+   Cả hai ẩn mặc định, hiện khi JS thêm class .show */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 200;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.lightbox.show {
+  display: flex;
+}
+.lightbox img {
+  max-width: 92%;
+  max-height: 80vh;
+  border-radius: 12px;
+}
+.lightbox p {
+  color: #fff;
+  margin-top: 12px;
+  font-weight: 700;
+}
+.lightbox button {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: #fff;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 300;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+.popup.show {
+  display: flex;
+}
+.popup-box {
+  background: #fff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+  padding: 24px;
+  position: relative;
+  color: #111;
+}
+.popup-box h3 {
+  font-size: 20px;
+}
+.popup-box p {
+  font-size: 13px;
+  opacity: 0.7;
+  margin: 6px 0 14px;
+}
+.popup-box input,
+.popup-box select,
+.popup-box textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+.popup-box button {
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+/* Nút ✕ đóng popup: viết .popup-box .popup-close để ưu tiên hơn ".popup-box button" (width:100%) ở trên */
+.popup-box .popup-close {
+  padding: 0;
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: #eee;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ===== 12. RESPONSIVE: màn hình rộng ≤ 900px (điện thoại, máy tính bảng) =====
+   Ẩn menu ngang, hiện nút ☰; gallery còn 2 cột; nút xếp full chiều ngang */
+@media (max-width: 900px) {
+  .hero-text h1 {
+    font-size: 30px;
+  }
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery img {
+    height: 170px;
+  }
+  .logo-wrap small {
+    display: none;
+  }
+  .show-gallery .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .show-section {
+    padding: 40px 4%;
+  }
+  .btn-row .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

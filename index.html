@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tuệ Nam - Vovinam</title>
+    <meta
+      name="description"
+      content="Công ty TNHH Đào Tạo & Giải Trí Tuệ Nam - Đào tạo Vovinam, MC, Ca hát, Diễn xuất, Tổ chức sự kiện. Địa chỉ: 131-133 Hồng Hà, P. Đức Nhuận. Hotline: 0978 235 785 - Nguyễn Nhật Lâm"
+    />
+    <link rel="icon" href="images/Logo.JPG" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Giao diện nằm trong file style.css (cùng thư mục) -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ================= HEADER: logo + menu + nút gọi ================= -->
+    <header>
+      <div class="logo-wrap">
+        <img src="images/Logo.JPG" alt="Logo Công ty TNHH Đào Tạo & Giải Trí Tuệ Nam" />
+        <div>
+          <b>CÔNG TY TNHH<br />ĐÀO TẠO & GIẢI TRÍ TUỆ NAM</b><br /><small
+            >131-133 Hồng Hà, P. Đức Nhuận</small
+          >
+        </div>
+      </div>
+      <!-- Menu ngang (ẩn trên điện thoại). href="#..." nhảy tới section có id tương ứng -->
+      <nav>
+        <a href="#hinh-anh">Hình Ảnh</a><a href="#vovinam">Vovinam</a
+        ><a href="#lich-hoc">Lịch Học</a><a href="#bieu-dien">Biểu Diễn</a
+        ><a href="#lien-he">Liên Hệ</a>
+      </nav>
+      <div style="display: flex; gap: 8px; align-items: center">
+        <a class="btn" href="tel:0978235785" style="padding: 10px 16px; font-size: 14px"
+          >📞 0978 235 785</a
+        >
+        <button
+          class="hamburger"
+          onclick="document.getElementById('mnav').classList.toggle('show')"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+    <!-- Menu thả xuống trên điện thoại (bật/tắt bằng nút ☰) -->
+    <div class="mobile-nav" id="mnav">
+      <a href="#hinh-anh">📸 Hình Ảnh Thật</a>
+      <a href="#vovinam">🥋 Lớp Vovinam</a>
+      <a href="#lich-hoc">🗓️ Lịch Học Vovinam</a>
+      <a href="#bieu-dien">🔥 Biểu Diễn Sân Khấu</a>
+      <a href="#lien-he">📞 Liên Hệ - 0978 235 785</a>
+    </div>
+
+    <!-- ================= HERO: giới thiệu + form đăng ký học thử ================= -->
+    <section class="hero">
+      <!-- Cột trái: tiêu đề, giới thiệu, ảnh lớn -->
+      <div class="hero-text">
+        <div
+          style="
+            background: var(--blue);
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-weight: 800;
+            font-size: 13px;
+          "
+        >
+          🥋 VOVINAM - VIỆT VÕ ĐẠO • TUỆ NAM
+        </div>
+        <h1 style="margin-top: 14px">
+          Học Vovinam<br /><span>Khỏe - Dũng - Đẹp</span><br />Chuẩn Võ Việt!
+        </h1>
+        <p>Vovinam cho thiếu nhi & người lớn: Tự vệ, thể lực, kỷ luật, biểu diễn võ nhạc.</p>
+        <p>
+          📍 <b>131-133 Hồng Hà, P. Đức Nhuận</b><br />🎤 Đoàn <b>Chí Linh - Vân Hà</b> trực thuộc
+          Tuệ Nam<br />🏆 Đội Vovinam Tuệ Nam - Huy chương vàng TP.HCM 2026
+        </p>
+        <div class="hero-img" style="margin-top: 16px">
+          <img
+            src="images/anh9.JPG"
+            alt="Đội Vovinam Tuệ Nam thi thăng cấp và nhận huy chương tại TP.HCM 2026"
+          />
+          <p style="text-align: center; font-size: 12px; margin-top: 6px; color: #ddd">
+            Kỳ thi Thăng cấp Sơ đẳng - Vovinam Tuệ Nam
+          </p>
+        </div>
+      </div>
+      <!-- Cột phải: form đăng ký. Nút gửi gọi hàm dangKy() trong script.js -->
+      <div class="hero-card">
+        <h3>🥋 ĐĂNG KÝ HỌC THỬ MIỄN PHÍ</h3>
+        <p style="font-size: 13px; margin-bottom: 12px">
+          Thầy <b>Nguyễn Nhật Lâm</b> tư vấn lớp phù hợp theo tuổi & trình độ.
+        </p>
+        <input id="hoten" placeholder="Họ và tên của bạn / của bé" />
+        <input id="sdt" placeholder="Số điện thoại / Zalo" />
+        <select id="lop">
+          <option>Vovinam Thiếu Nhi (4-12 tuổi)</option>
+          <option>Vovinam Thiếu Niên (13-17 tuổi)</option>
+          <option>Vovinam Người Lớn / Tự Vệ</option>
+          <option>Vovinam Biểu Diễn - Võ Nhạc</option>
+          <option>MC - Ca Hát - Diễn Xuất</option>
+          <option>Đặt Show Diễn</option>
+        </select>
+        <button onclick="dangKy()">GỬI ĐĂNG KÝ QUA ZALO</button>
+        <p style="font-size: 12px; text-align: center; margin-top: 10px">
+          Bấm nút sẽ mở Zalo của Nguyễn Nhật Lâm
+        </p>
+        <hr style="margin: 16px 0; border: 0; border-top: 1px solid #eee" />
+        <p style="font-size: 13px; text-align: center">
+          📞 Hoặc gọi trực tiếp:
+          <a href="tel:0978235785" style="color: var(--red); font-weight: 900">0978 235 785</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= HÌNH ẢNH THẬT (id=hinh-anh) ================= -->
+    <section class="section" id="hinh-anh">
+      <h2>HÌNH ẢNH <span>THẬT TẠI TUỆ NAM</span></h2>
+      <p class="sub">Bấm vào hình để phóng to - Lớp học - Thi đấu - Biểu diễn - Thi lên đai</p>
+      <!-- Mỗi ảnh = 1 thẻ <figure>: src = tên file, alt = mô tả (tốt cho SEO), figcaption = chú thích.
+       Muốn thêm ảnh: copy nguyên 1 dòng <figure> rồi đổi src, alt, chú thích -->
+      <div class="gallery">
+        <figure>
+          <img
+            src="images/anh1.jpg"
+            alt="Lớp Vovinam thiếu nhi Tuệ Nam tập tại sân trường Hồng Hà"
+            onclick="openLightbox(this)"
+          />
+          <figcaption>🥋 Lớp Vovinam Thiếu Nhi</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/anh2.jpg"
+            alt="Bé gái Vovinam Tuệ Nam tập đòn tay kỷ luật"
+            onclick="openLightbox(this)"
+          />
+          <figcaption>🥋 Các bé tập đòn tay</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/anh3.jpg"
+            alt="Đồng diễn Vovinam Tuệ Nam hơn 100 võ sinh"
+            onclick="openLightbox(this)"
+          />
+          <figcaption>🥋 Đồng diễn - 100 võ sinh</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/anh4.JPEG"
+            alt="Võ sinh Tuệ Nam biểu diễn võ nhạc đòn bay"
+            onclick="openLightbox(this)"
+          />
+          <figcaption>🔥 Võ Nhạc - Đòn Bay</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/anh5.JPEG"
+            alt="Đội Tuệ Nam biểu diễn Lân Rồng kết hợp Vovinam"
+            onclick="openLightbox(this)"
+          />
+          <figcaption>🐲 Lân - Rồng - Võ nhạc</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/anh6.JPEG"
+            alt="Đội hình tháp Vovinam Tuệ Nam biểu diễn thi đấu"
+            onclick="openLightbox(this)"
+          />
+          <figcaption>⭐ Đội Hình Tháp</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/anh7.JPG"
+            alt="Đội Vovinam Tuệ Nam nhận huy chương vàng TP.HCM 2026"
+            onclick="openLightbox(this)"
+          />
+          <figcaption>🏆 Huy chương Vàng 2026</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/anh8.JPEG"
+            alt="Võ sinh Tuệ Nam thi đấu đối kháng Vovinam"
+            onclick="openLightbox(this)"
+          />
+          <figcaption>🥊 Đối kháng thực tế</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/anh9.JPG"
+            alt="Kỳ thi thăng cấp Sơ đẳng Vovinam Tuệ Nam"
+            onclick="openLightbox(this)"
+          />
+          <figcaption>🎓 Kỳ thi Thăng cấp</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= VOVINAM (id=vovinam): giới thiệu môn + các lớp + lịch học ================= -->
+    <section class="section" id="vovinam" style="padding-top: 0">
+      <h2>MÔN <span style="color: var(--blue)">VOVINAM</span> - VIỆT VÕ ĐẠO</h2>
+      <p class="sub">Võ Việt - Hồn Việt | Rèn thân - Luyện tâm - Tự vệ thực chiến</p>
+      <div class="vovinam">
+        <!-- Trái: lý do nên học -->
+        <div class="vovinam-left">
+          <h3 style="font-size: 24px">🥋 Tại Sao Học Vovinam Tại Tuệ Nam?</h3>
+          <ul style="margin: 12px 0 12px 18px; line-height: 2">
+            <li><b>Tự vệ thực tế:</b> Thoát kẹp, khóa tay, chống tấn công</li>
+            <li><b>Khỏe & dẻo dai:</b> Tăng thể lực, chiều cao, phản xạ</li>
+            <li><b>Kỷ luật & tự tin:</b> Lễ phép, kiên trì, bản lĩnh sân khấu</li>
+            <li><b>Thi đấu & biểu diễn:</b> Thi lên đai, thi đấu, diễn võ nhạc, múa Lân - Rồng</li>
+          </ul>
+          <a class="btn btn-blue" href="https://zalo.me/0978235785">ĐĂNG KÝ HỌC VOVINAM</a>
+        </div>
+        <!-- Phải: danh sách lớp (mỗi lớp là 1 thẻ .item) -->
+        <div class="vovinam-right">
+          <h3>📋 CÁC LỚP VOVINAM</h3>
+          <div class="item">
+            <div><b>Vovinam Thiếu Nhi</b><br /><small>4 - 12 tuổi | Cơ bản - Đai xanh</small></div>
+            <b>Ưu đãi</b>
+          </div>
+          <div class="item">
+            <div>
+              <b>Vovinam Thiếu Niên</b><br /><small>13 - 17 tuổi | Đối kháng - Võ nhạc</small>
+            </div>
+            <b>Ưu đãi</b>
+          </div>
+          <div class="item">
+            <div><b>Vovinam Người Lớn</b><br /><small>Tự vệ - Thể lực - Giảm stress</small></div>
+            <b>Ưu đãi</b>
+          </div>
+          <p style="font-size: 13px; text-align: center; margin-top: 8px">
+            📞 Gọi <b>0978 235 785</b> để xếp lớp
+          </p>
+        </div>
+      </div>
+      <!-- Lịch học (id=lich-hoc, menu "Lịch Học" nhảy tới đây). Mỗi <tr> = 1 ca học -->
+      <div id="lich-hoc" style="max-width: 900px; margin: 28px auto 0">
+        <h3 style="text-align: center; font-size: 22px">🗓️ LỊCH HỌC VOVINAM TẠI 131-133 HỒNG HÀ</h3>
+        <p style="text-align: center; font-size: 13px; opacity: 0.7">
+          Học thử buổi đầu miễn phí - Nhắn Zalo 0978 235 785 để giữ chỗ
+        </p>
+        <table class="schedule">
+          <tr>
+            <th>Ngày Tập</th>
+            <th>Khung Giờ</th>
+            <th>Lớp / Đối Tượng</th>
+            <th>Địa Điểm</th>
+          </tr>
+          <tr>
+            <td><b>Thứ 2 - 4 - 6</b><br /><small>Ca 1</small></td>
+            <td><b>17g30 - 19g00</b></td>
+            <td><b>Thiếu Nhi - Cơ Bản</b><br /><small>4-12 tuổi • Mới bắt đầu</small></td>
+            <td>131-133 Hồng Hà</td>
+          </tr>
+          <tr>
+            <td><b>Thứ 2 - 4 - 6</b><br /><small>Ca 2</small></td>
+            <td><b>19g00 - 20g30</b></td>
+            <td>
+              <b>Thiếu Niên - Người Lớn</b><br /><small>13 tuổi trở lên • Đối kháng - Tự vệ</small>
+            </td>
+            <td>131-133 Hồng Hà</td>
+          </tr>
+          <tr>
+            <td><b>Thứ 3 - 5 - 7</b></td>
+            <td><b>19g00 - 20g30</b></td>
+            <td>
+              <b>Thiếu Nhi Nâng Cao - Võ Nhạc</b><br /><small
+                >Đã có căn bản • Thi đai - Biểu diễn</small
+              >
+            </td>
+            <td>131-133 Hồng Hà</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- ================= BIỂU DIỄN SÂN KHẤU (id=bieu-dien) ================= -->
+    <section class="section dark show-section" id="bieu-dien">
+      <h2>CHUYÊN NHẬN <span>BIỂU DIỄN SÂN KHẤU</span></h2>
+      <p class="show-sub">
+        Võ Thuật Sân Khấu - Võ Nhạc - Lân Sư Rồng - Đồng Diễn Vovinam<br />Đội hình 10 - 100 võ sinh
+        | Dàn dựng riêng theo sự kiện của bạn
+      </p>
+      <!-- 4 thẻ dịch vụ. Nút "ĐẶT TIẾT MỤC NÀY" gọi openPopup('tên gói') để mở form và chọn sẵn gói -->
+      <div class="grid">
+        <!-- Thẻ 1: Võ nhạc -->
+        <div class="show-card">
+          <div class="icon">🔥</div>
+          <h3>VÕ NHẠC - VÕ THUẬT SÂN KHẤU</h3>
+          <p>
+            <b>Tiết mục đinh của Tuệ Nam.</b> Võ nhạc kết hợp nhạc hiện đại, đòn bay, nhào lộn, đối
+            kháng dàn dựng.
+          </p>
+          <ul>
+            <li>Võ nhạc thiếu nhi - vui nhộn</li>
+            <li>Võ nhạc đối kháng - mạnh mẽ</li>
+            <li>Đòn chân Vovinam - thương hiệu</li>
+          </ul>
+          <p><b>Phù hợp:</b> Khai trương, lễ hội, trường học, trung thu</p>
+          <button class="btn btn-red" onclick="openPopup('Võ Nhạc - Võ Thuật Sân Khấu')">
+            ĐẶT TIẾT MỤC NÀY →
+          </button>
+        </div>
+        <!-- Thẻ 2: Múa Lân - Sư - Rồng -->
+        <div class="show-card">
+          <div class="icon">🐲</div>
+          <h3>MÚA LÂN - SƯ - RỒNG</h3>
+          <p>
+            Lân - Sư - Rồng kết hợp võ nhạc, trống hội, tạo không khí bùng nổ ngay từ đầu chương
+            trình.
+          </p>
+          <ul>
+            <li>Lân khai trương - hái tiền</li>
+            <li>Lân lên Mai Hoa Thung</li>
+            <li>Rồng vàng - múa Rồng 9 người</li>
+          </ul>
+          <p><b>Phù hợp:</b> Khai trương, động thổ, Tết</p>
+          <button class="btn btn-red" onclick="openPopup('Múa Lân - Sư - Rồng')">
+            ĐẶT TIẾT MỤC NÀY →
+          </button>
+        </div>
+        <!-- Thẻ 3: Đồng diễn -->
+        <div class="show-card">
+          <div class="icon">🥋</div>
+          <h3>ĐỒNG DIỄN VOVINAM</h3>
+          <p>
+            Đồng diễn 30 - 100 võ sinh, đội hình đẹp, đều, kỷ luật - rất hợp quay clip, làm hình ảnh
+            cho trường / công ty.
+          </p>
+          <ul>
+            <li>Đồng diễn khai mạc giải đấu</li>
+            <li>Đồng diễn hội thao trường học</li>
+            <li>Đồng diễn lễ hội - sự kiện lớn</li>
+          </ul>
+          <p><b>Phù hợp:</b> Trường học, UBND, lễ hội</p>
+          <button class="btn btn-red" onclick="openPopup('Đồng Diễn Vovinam')">
+            ĐẶT TIẾT MỤC NÀY →
+          </button>
+        </div>
+        <!-- Thẻ 4: Dàn dựng theo yêu cầu -->
+        <div class="show-card">
+          <div class="icon">⭐</div>
+          <h3>DÀN DỰNG THEO YÊU CẦU</h3>
+          <p>
+            Bạn có ý tưởng? Tuệ Nam dàn dựng riêng tiết mục theo thương hiệu, nhạc, thông điệp của
+            bạn.
+          </p>
+          <ul>
+            <li>Tiết mục mở màn 5 - 15 phút</li>
+            <li>Có MC, âm thanh, ánh sáng</li>
+            <li>Hỗ trợ quay clip TikTok / Flycam</li>
+          </ul>
+          <p><b>Cam kết:</b> Đúng giờ - Đúng đội hình</p>
+          <button class="btn btn-red" onclick="openPopup('Dàn Dựng Theo Yêu Cầu')">
+            ĐẶT TIẾT MỤC NÀY →
+          </button>
+        </div>
+      </div>
+      <!-- Gallery ảnh biểu diễn (dùng lại ảnh anh3 - anh6) -->
+      <div class="show-gallery">
+        <h3>📸 HÌNH BIỂU DIỄN THẬT CỦA TUỆ NAM</h3>
+        <div class="gallery">
+          <figure>
+            <img
+              src="images/anh4.JPEG"
+              alt="Biểu diễn võ nhạc Vovinam Tuệ Nam"
+              onclick="openLightbox(this)"
+            />
+            <figcaption>🔥 Võ Nhạc - Đòn Bay</figcaption>
+          </figure>
+          <figure>
+            <img src="images/anh5.JPEG" alt="Biểu diễn Lân Sư Rồng Tuệ Nam" onclick="openLightbox(this)" />
+            <figcaption>🐲 Lân - Rồng</figcaption>
+          </figure>
+          <figure>
+            <img src="images/anh6.JPEG" alt="Đội hình tháp Vovinam Tuệ Nam" onclick="openLightbox(this)" />
+            <figcaption>⭐ Đội Hình Tháp</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/anh3.jpg"
+              alt="Đồng diễn Vovinam Tuệ Nam 100 võ sinh"
+              onclick="openLightbox(this)"
+            />
+            <figcaption>🥋 Đồng Diễn 100 Võ Sinh</figcaption>
+          </figure>
+        </div>
+      </div>
+      <!-- Quy trình đặt show 3 bước + nút gọi / Zalo / mở form -->
+      <div class="show-steps">
+        <h3>📋 ĐẶT SHOW CHỈ 3 BƯỚC</h3>
+        <p>
+          <b style="color: #ffc107">B1:</b> Nhắn Zalo / Gọi <b>0978 235 785</b> - gửi ngày, giờ, địa
+          điểm<br /><b style="color: #ffc107">B2:</b> Tuệ Nam gửi video mẫu + báo giá + chốt đội
+          hình<br /><b style="color: #ffc107">B3:</b> Đội đến sớm 60 phút - tổng duyệt - biểu diễn
+          đúng giờ
+        </p>
+        <div class="btn-row">
+          <a class="btn" style="background: #e60000" href="tel:0978235785"
+            >📞 GỌI ĐẶT SHOW: 0978 235 785</a
+          ><a class="btn" style="background: #0068ff" href="https://zalo.me/0978235785"
+            >💬 NHẮN ZALO BÁO GIÁ NGAY</a
+          ><button
+            class="btn"
+            style="background: #ffc107; color: #000"
+            onclick="openPopup('Đặt Show Biểu Diễn')"
+          >
+            📝 ĐẶT LỊCH QUA FORM
+          </button>
+        </div>
+        <p class="note">
+          📍 Phục vụ tại: 131-133 Hồng Hà, P. Đức Nhuận & toàn TP.HCM - Bình Dương - Đồng Nai | Đặt
+          trước 3-5 ngày để giữ đội hình đẹp nhất
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= KHÓA ĐÀO TẠO KHÁC (id=dao-tao) ================= -->
+    <section class="section" id="dao-tao">
+      <h2>KHÓA <span>ĐÀO TẠO</span> KHÁC</h2>
+      <div class="grid">
+        <div class="card">
+          <div style="font-size: 32px">🎤</div>
+          <h3>MC - Dẫn Chương Trình</h3>
+          <p>MC sự kiện, MC đám cưới, MC truyền hình, giọng nói, xử lý tình huống.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 32px">🎵</div>
+          <h3>Ca Hát - Thanh Nhạc</h3>
+          <p>Luyện hơi, thanh nhạc, phong cách biểu diễn, thu âm phòng thu.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 32px">🎭</div>
+          <h3>Diễn Xuất - Kịch Nói</h3>
+          <p>Diễn xuất sân khấu, cải lương, kịch, điện ảnh.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 32px">💃</div>
+          <h3>Nhảy - Dance & Model</h3>
+          <p>Nhảy hiện đại, múa dân gian, catwalk, tạo dáng trước ống kính.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 32px">👶</div>
+          <h3>Tài Năng Nhí</h3>
+          <p>Lớp cho bé 4-12 tuổi: MC nhí, hát, nhảy, mẫu nhí, tự tin giao tiếp.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 32px">🎪</div>
+          <h3>Đào Tạo Doanh Nghiệp</h3>
+          <p>Thuyết trình, giao tiếp, xây dựng thương hiệu cá nhân.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DỊCH VỤ GIẢI TRÍ & SỰ KIỆN (id=giai-tri, nền tối) ================= -->
+    <section class="section dark" id="giai-tri">
+      <h2>DỊCH VỤ <span style="color: var(--gold)">GIẢI TRÍ & SỰ KIỆN</span></h2>
+      <p class="sub" style="color: #ccc">Đoàn Chí Linh - Vân Hà & Đội ngũ nghệ sĩ Tuệ Nam</p>
+      <div class="grid">
+        <div class="card">
+          <h3>🎪 Tổ Chức Sự Kiện Trọn Gói</h3>
+          <p>Sinh nhật, khai trương, đám cưới, hội chợ, lễ hội, trung thu, tất niên.</p>
+        </div>
+        <div class="card">
+          <h3>🥋 Biểu Diễn Vovinam - Lân Sư Rồng</h3>
+          <p>
+            Biểu diễn võ nhạc, đồng diễn Vovinam, múa Lân - Rồng cho khai trương, lễ hội, trường
+            học.
+          </p>
+        </div>
+        <div class="card">
+          <h3>🎙️ Cung Cấp Nghệ Sĩ</h3>
+          <p>Ca sĩ, MC, ảo thuật, lô tô, cải lương, hài kịch, nhóm nhảy.</p>
+        </div>
+        <div class="card">
+          <h3>📺 Sản Xuất MV - Liveshow</h3>
+          <p>Quay MV, dựng clip TikTok, livestream, quay chương trình.</p>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 24px">
+        <a class="btn" href="https://zalo.me/0978235785">ĐẶT SHOW / ĐẶT LỚP VOVINAM</a>
+      </p>
+    </section>
+
+    <!-- ================= LIÊN HỆ (id=lien-he): thông tin + nút + bản đồ ================= -->
+    <section class="section" id="lien-he">
+      <h2>LIÊN HỆ <span>TUỆ NAM</span></h2>
+      <p style="text-align: center; margin: 12px 0; line-height: 2">
+        <b>Công ty TNHH Đào Tạo & Giải Trí Tuệ Nam</b><br />👤 Phụ trách: <b>Nguyễn Nhật Lâm</b
+        ><br />📍 Địa chỉ: <b>131-133 Hồng Hà, P. Đức Nhuận</b><br />📞 Hotline / Zalo:
+        <a href="tel:0978235785" style="color: #e60000; font-weight: 900">0978 235 785</a><br />🥋
+        Môn chính: <b>Vovinam - Việt Võ Đạo</b> | 🕘 8:00 - 21:00 mỗi ngày
+      </p>
+      <p style="text-align: center">
+        <a class="btn" href="tel:0978235785">📞 GỌI 0978 235 785</a>
+        <a
+          class="btn"
+          style="background: #0068ff; margin-left: 8px"
+          href="https://zalo.me/0978235785"
+          >💬 NHẮN ZALO</a
+        >
+        <a
+          class="btn btn-blue"
+          style="margin-left: 8px"
+          href="https://www.google.com/maps/search/?api=1&query=131-133+Hồng+Hà+Đức+Nhuận"
+          >📍 CHỈ ĐƯỜNG</a
+        >
+      </p>
+      <!-- Bản đồ Google Maps nhúng: đổi địa chỉ ở tham số q= trong src nếu dời chỗ -->
+      <iframe
+        class="map"
+        src="https://www.google.com/maps?q=131-133%20Hồng%20Hà%2C%20Đức%20Nhuận&output=embed"
+        loading="lazy"
+        allowfullscreen
+        title="Bản đồ Tuệ Nam - 131-133 Hồng Hà, P. Đức Nhuận"
+      ></iframe>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div>
+        <b>TUỆ NAM - TRAINING & ENTERTAINMENT</b><br /><small
+          >131-133 Hồng Hà, P. Đức Nhuận<br />Hotline: 0978 235 785 - Nguyễn Nhật Lâm</small
+        >
+      </div>
+      <div><small>© 2026 Tuệ Nam. All rights reserved.</small></div>
+    </footer>
+
+    <!-- ================= NÚT NỔI: Zalo (góc phải dưới) và Admin (góc trái dưới) ================= -->
+    <a class="float" href="https://zalo.me/0978235785">💬 Zalo: Nguyễn Nhật Lâm</a>
+    <button class="admin-btn" onclick="document.getElementById('loginPopup').classList.add('show')">
+      🔐 Admin
+    </button>
+
+    <!-- ================= LIGHTBOX: lớp phủ phóng to ảnh (nội dung do openLightbox() điền) ================= -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <button onclick="closeLightbox()">✕</button
+      ><img id="lbImg" src="" alt="Hình ảnh Vovinam Tuệ Nam phóng to" />
+      <p id="lbCap"></p>
+    </div>
+
+    <!-- ================= POPUP ĐẶT SHOW: bấm vùng tối bên ngoài hoặc nút ✕ để đóng ================= -->
+    <div class="popup" id="popupDatShow" onclick="if (event.target === this) closePopup();">
+      <div class="popup-box">
+        <button class="popup-close" onclick="closePopup()">✕</button>
+        <h3>📝 ĐẶT LỊCH BIỂU DIỄN</h3>
+        <p>Điền thông tin, bấm gửi sẽ mở Zalo của thầy Nguyễn Nhật Lâm để báo giá ngay.</p>
+        <input id="ppTen" placeholder="Tên bạn / Tên công ty *" /><input
+          id="ppSdt"
+          placeholder="Số điện thoại / Zalo *"
+        /><select id="ppGoi">
+          <option>Võ Nhạc - Võ Thuật Sân Khấu</option>
+          <option>Múa Lân - Sư - Rồng</option>
+          <option>Đồng Diễn Vovinam</option>
+          <option>Dàn Dựng Theo Yêu Cầu</option>
+          <option>Trọn Gói Sự Kiện</option></select
+        ><input id="ppNgay" type="date" /><input
+          id="ppDiaDiem"
+          placeholder="Địa điểm biểu diễn"
+        /><textarea
+          id="ppGhiChu"
+          rows="3"
+          placeholder="Ghi chú: Giờ diễn, số lượng võ sinh, ngân sách..."
+        ></textarea
+        ><button style="background: #e60000; color: #fff" onclick="guiDatShow()">
+          GỬI QUA ZALO - NHẬN BÁO GIÁ →</button
+        ><button style="background: #eee; color: #111; margin-top: 8px" onclick="closePopup()">
+          Đóng
+        </button>
+      </div>
+    </div>
+
+    <!-- ================= POPUP ĐĂNG NHẬP ADMIN (⚠️ chỉ kiểm tra trên trình duyệt, không an toàn) ================= -->
+    <div
+      class="popup"
+      id="loginPopup"
+      onclick="if (event.target === this) this.classList.remove('show');"
+    >
+      <div class="popup-box">
+        <button
+          class="popup-close"
+          onclick="document.getElementById('loginPopup').classList.remove('show')"
+        >
+          ✕
+        </button>
+        <h3>🔐 ĐĂNG NHẬP QUẢN TRỊ TUỆ NAM</h3>
+        <p>Chỉ dành cho quản lý - Nguyễn Nhật Lâm</p>
+        <input id="adminUser" placeholder="Tên đăng nhập" /><input
+          id="adminPass"
+          type="password"
+          placeholder="Mật khẩu"
+        /><button style="background: #0033a0; color: #fff" onclick="loginAdmin()">ĐĂNG NHẬP</button>
+        <p id="loginMsg" style="color: red; font-size: 13px; margin-top: 8px"></p>
+        <p style="font-size: 12px; background: #fff8e7; padding: 10px; border-radius: 10px">
+          Tài khoản mẫu: <b>admin / tuenam123</b>
+        </p>
+      </div>
+    </div>
+    <!-- Bảng hiện ra sau khi đăng nhập thành công -->
+    <div class="popup" id="adminPanel">
+      <div class="popup-box">
+        <button
+          class="popup-close"
+          onclick="document.getElementById('adminPanel').classList.remove('show')"
+        >
+          ✕
+        </button>
+        <h3>✅ Xin chào, Nguyễn Nhật Lâm!</h3>
+        <p>Bạn đã đăng nhập thành công.</p>
+        <p style="font-size: 14px; line-height: 2">
+          📞 Hotline: <b>0978 235 785</b><br />📍 Địa chỉ: <b>131-133 Hồng Hà, P. Đức Nhuận</b
+          ><br />🗓️ Lịch: 2-4-6: 17g30-19g00 & 19g00-20g30<br />3-5-7: 19g00-20g30
+        </p>
+        <button
+          style="background: #22c400; color: #fff"
+          onclick="window.location.href = 'https://zalo.me/0978235785'"
+        >
+          MỞ ZALO XEM ĐƠN ĐẶT SHOW</button
+        ><button style="background: #eee; color: #111; margin-top: 8px" onclick="logoutAdmin()">
+          ĐĂNG XUẤT
+        </button>
+      </div>
+    </div>
+
+    <!-- Mã xử lý nằm trong file script.js (cùng thư mục), đặt cuối trang để HTML tải xong trước -->
+    <script src="script.js"></script>
+  </body>
+</html>

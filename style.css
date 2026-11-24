@@ -33,6 +33,14 @@ a {
   text-decoration: none;
 }
 
+/* Cuộn mượt khi bấm menu, và chừa chỗ cho header cố định để tiêu đề không bị che */
+html {
+  scroll-behavior: smooth;
+}
+[id] {
+  scroll-margin-top: 80px;
+}
+
 /* ===== 2. HEADER (cố định trên cùng) & MENU ===== */
 header {
   position: fixed;
@@ -557,4 +565,78 @@ footer a {
     width: 100%;
     text-align: center;
   }
+}
+
+/* ===== HỆ THỐNG CLB: khối giới thiệu các câu lạc bộ trực thuộc ===== */
+.clb-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.clb-title {
+  text-align: center;
+  font-size: 24px;
+}
+.clb-sub {
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 6px;
+}
+.clb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* Thẻ CLB: .truso = trụ sở chính, .doi-tuyen = đội tuyển */
+.clb-card {
+  background: #fff;
+  border: 2px solid var(--blue);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+.clb-card h3 {
+  font-size: 17px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.clb-card p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+.clb-card.truso {
+  background: #fff3e0;
+  border-color: var(--gold);
+}
+.clb-card.doi-tuyen {
+  background: #fff3e0;
+  border-color: var(--red);
+}
+.clb-card h3 span {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+/* Hàng nút trong thẻ: ĐĂNG KÝ + CHỈ ĐƯỜNG */
+.clb-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.clb-actions .btn {
+  padding: 10px 14px;
+  font-size: 13px;
+}
+.btn-map {
+  background: #fff;
+  color: #111;
+  border: 1px solid #ddd;
 }

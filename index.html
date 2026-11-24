@@ -29,9 +29,12 @@
       </div>
       <!-- Menu ngang (ẩn trên điện thoại). href="#..." nhảy tới section có id tương ứng -->
       <nav>
-        <a href="#hinh-anh">Hình Ảnh</a><a href="#vovinam">Vovinam</a
-        ><a href="#lich-hoc">Lịch Học</a><a href="#bieu-dien">Biểu Diễn</a
-        ><a href="#lien-he">Liên Hệ</a>
+        <a href="#hinh-anh">Hình Ảnh</a>
+        <a href="#vovinam">Vovinam</a>
+        <a href="#lich-hoc">Lịch Học</a>
+        <a href="#he-thong-clb">Hệ Thống CLB</a>
+        <a href="#bieu-dien">Biểu Diễn</a>
+        <a href="#lien-he">Liên Hệ</a>
       </nav>
       <div style="display: flex; gap: 8px; align-items: center">
         <a class="btn" href="tel:0978235785" style="padding: 10px 16px; font-size: 14px"
@@ -46,10 +49,11 @@
       </div>
     </header>
     <!-- Menu thả xuống trên điện thoại (bật/tắt bằng nút ☰) -->
-    <div class="mobile-nav" id="mnav">
+    <div class="mobile-nav" id="mnav" onclick="this.classList.remove('show')">
       <a href="#hinh-anh">📸 Hình Ảnh Thật</a>
       <a href="#vovinam">🥋 Lớp Vovinam</a>
       <a href="#lich-hoc">🗓️ Lịch Học Vovinam</a>
+      <a href="#he-thong-clb">🏆 Hệ Thống CLB</a>
       <a href="#bieu-dien">🔥 Biểu Diễn Sân Khấu</a>
       <a href="#lien-he">📞 Liên Hệ - 0978 235 785</a>
     </div>
@@ -75,8 +79,7 @@
         </h1>
         <p>Vovinam cho thiếu nhi & người lớn: Tự vệ, thể lực, kỷ luật, biểu diễn võ nhạc.</p>
         <p>
-          📍 <b>131-133 Hồng Hà, P. Đức Nhuận</b><br />🎤 Đoàn <b>Chí Linh - Vân Hà</b> trực thuộc
-          Tuệ Nam<br />🏆 Đội Vovinam Tuệ Nam - Huy chương vàng TP.HCM 2026
+          📍 <b>131-133 Hồng Hà, P. Đức Nhuận</b><br />🏆 Đội Vovinam Tuệ Nam - Huy chương vàng TP.HCM 2026
         </p>
         <div class="hero-img" style="margin-top: 16px">
           <img
@@ -274,6 +277,115 @@
             <td>131-133 Hồng Hà</td>
           </tr>
         </table>
+      </div>
+    </section>
+
+    <!-- ================= HỆ THỐNG CLB (id=he-thong-clb) ================= -->
+    <section class="section">
+      <div class="clb-wrap" id="he-thong-clb">
+        <h3 class="clb-title">🏆 HỆ THỐNG CÂU LẠC BỘ VOVINAM TRỰC THUỘC CÔNG TY TUỆ NAM</h3>
+        <p class="clb-sub">Bấm nút Chỉ Đường để Google Maps dẫn bạn tới CLB gần nhất</p>
+
+        <div class="clb-grid">
+          <!-- Trụ sở chính -->
+          <div class="clb-card truso">
+            <h3>🥋 CLB VOVINAM HỒNG HÀ <span>TRỤ SỞ CHÍNH</span></h3>
+            <p>
+              📍 <b>131-133 Hồng Hà, P. Đức Nhuận</b><br />
+              👤 <b>Nguyễn Nhật Lâm - 0978 235 785</b><br />
+              🗓️ <b>Thứ 2-4-6 hàng tuần</b><br />
+              ⏰ <b>17g30 - 19g00</b><br /> 
+              ⏰ <b>19g00 - 20g30</b><br />
+              🗓️ <b>Thứ 3-5-7 hàng tuần</b><br />
+              ⏰ <b>19g00 - 20g30</b><br />
+              <!--🗓️ <b>Sáng 7-CN:</b> 7g30-9g00-->
+            </p>
+            <div class="clb-actions">
+              <a class="btn btn-blue" href="https://zalo.me/0978235785">ĐĂNG KÝ</a>
+              <a class="btn btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=131-133+Hồng+Hà+Phường+Đức+Nhuận" target="_blank" rel="noopener">📍 CHỈ ĐƯỜNG</a>
+            </div>
+          </div>
+
+          <!-- Trường TH Phú Nhuận -->
+          <div class="clb-card">
+            <h3>🥋 CLB TRƯỜNG TH PHÚ NHUẬN</h3>
+            <p>
+              📍 <b>15 Hồ Biểu Chánh, Phường Phú Nhuận</b><br />
+              👤 <b>Đội HLV Tuệ Nam</b><br />
+              🗓️ <b>Thứ 3 - 5 hàng tuần</b><br />
+              ⏰ <b>16g45 - 18g45</b><br />
+              🎯 Học sinh Trường TH Phú Nhuận
+            </p>
+            <div class="clb-actions">
+              <a class="btn" href="https://zalo.me/0978235785">ĐĂNG KÝ</a>
+              <a class="btn btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=15+Hồ+Biểu+Chánh+Phường+Phú+Nhuận" target="_blank" rel="noopener">📍 CHỈ ĐƯỜNG</a>
+            </div>
+          </div>
+
+          <!-- Trường TH Đặng Văn Ngữ -->
+          <div class="clb-card">
+            <h3>🥋 CLB TRƯỜNG TH ĐẶNG VĂN NGỮ</h3>
+            <p>
+              📍 <b>35 Đặng Văn Ngữ, Phường Phú Nhuận</b><br />
+              👤 <b>Đội HLV Tuệ Nam</b><br />
+              🗓️ <b>Thứ 2 - 4 - 6 hàng tuần</b><br />
+              ⏰ <b>16g30 - 18g00</b><br />
+              🎯 Học sinh Trường TH Đặng Văn Ngữ
+            </p>
+            <div class="clb-actions">
+              <a class="btn" href="https://zalo.me/0978235785">ĐĂNG KÝ</a>
+              <a class="btn btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=Trường+Tiểu+học+Đặng+Văn+Ngữ+35+Đặng+Văn+Ngữ+Phường+Phú+Nhuận" target="_blank" rel="noopener">📍 CHỈ ĐƯỜNG</a>
+            </div>
+          </div>
+
+          <!-- Trường THCS Ngô Tất Tố -->
+          <div class="clb-card">
+            <h3>🥋 CLB TRƯỜNG THCS NGÔ TẤT TỐ</h3>
+            <p>
+              📍 <b>17 Đặng Văn Ngữ, Phường Phú Nhuận</b><br />
+              👤 <b>Đội HLV Tuệ Nam</b><br />
+              🗓️ <b>Thứ 3 - 5 hàng tuần</b><br />
+              ⏰ <b>16g30 - 18g30</b><br />
+              🎯 Học sinh THCS Ngô Tất Tố
+            </p>
+            <div class="clb-actions">
+              <a class="btn" href="https://zalo.me/0978235785">ĐĂNG KÝ</a>
+              <a class="btn btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=17+Đặng+Văn+Ngữ+Phường+Phú+Nhuận+Trường+THCS+Ngô+Tất+Tố" target="_blank" rel="noopener">📍 CHỈ ĐƯỜNG</a>
+            </div>
+          </div>
+
+          <!-- CLB Vạn Phúc -->
+          <div class="clb-card">
+            <h3>🥋 CLB VẠN PHÚC</h3>
+            <p>
+              📍 <b>Khu dân cư Vạn Phúc, Phường Hiệp Bình</b><br />
+              👤 <b>Đội HLV Tuệ Nam</b><br />
+              🗓️ <b>Các ngày trong tuần</b><br />
+              ⏰ <b>18g00 - 19g30</b><br />
+              🎯 Bé & Người lớn tại KDC Vạn Phúc
+            </p>
+            <div class="clb-actions">
+              <a class="btn" href="https://zalo.me/0978235785">ĐĂNG KÝ</a>
+              <a class="btn btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=Khu+dân+cư+Vạn+Phúc+Phường+Hiệp+Bình" target="_blank" rel="noopener">📍 CHỈ ĐƯỜNG</a>
+            </div>
+          </div>
+
+          <!-- Đội tuyển -->
+          <div class="clb-card doi-tuyen">
+            <h3>⭐ ĐỘI TUYỂN VOVINAM TUỆ NAM</h3>
+            <>
+              📍 <b>Tập trung tại 131-133 Hồng Hà</b><br />
+              👤 <b>Nguyễn Nhật Lâm</b><br />
+              🗓️ <b>Thứ 2-4-6 & 3-5-7 hàng tuần</b><br />
+              ⏰ <b>19g00 - 21g00</b><br />
+              <!--🗓️ <b>Sáng CN:</b> 7g30-10g00<br />-->
+            </p>
+            <div class="clb-actions">
+              <a class="btn btn-red" href="https://zalo.me/0978235785">ĐĂNG KÝ TUYỂN CHỌN</a>
+              <a class="btn btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=131-133+Hồng+Hà+Phường+Đức+Nhuận" target="_blank" rel="noopener">📍 CHỈ ĐƯỜNG</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
